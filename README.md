@@ -2,7 +2,9 @@
 
 Change to master branch to see the code
 Frontend: XAML
+
 Backend: C#
+
 Editor: Visual Studio
 
 In this mobile app user is able:
