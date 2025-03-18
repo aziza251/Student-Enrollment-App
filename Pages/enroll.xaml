@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="mobile.enroll">
+
+    <VerticalStackLayout>
+
+        <Label
+            Text="Enroll"
+            TextColor="Purple"
+            FontSize="Large"
+            VerticalOptions="Center"
+            HorizontalOptions="Center"/>
+
+        <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+        <StackLayout Orientation="Vertical" WidthRequest="350">
+            
+        <Label Text="Student" Margin="10" FontAttributes="Bold" FontSize="30" HorizontalTextAlignment="Center"/>
+        <ListView x:Name="StudentList" ItemTapped="StudentList_ItemTapped" HeightRequest="150">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Spacing="15" Margin="10">
+                            <Label Text="{Binding ID}" Padding="10"/>
+                            <Label Text="{Binding Name}" Padding="10"/>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        </StackLayout>
+
+            <StackLayout Orientation="Vertical" WidthRequest="350" >
+                
+       <Label Text="Course" Margin="10" FontAttributes="Bold" FontSize="30" HorizontalTextAlignment="Center"/>
+        <ListView x:Name="CourseList" ItemTapped="CourseList_ItemTapped" HeightRequest="150">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Spacing="15" Margin="10">
+                            <Label Text="{Binding course_Id}" Padding="10"/>
+                            <Label Text="{Binding course_code}" Padding="10"/>
+                            <Label Text="{Binding course_name}" Padding="10"/>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        </StackLayout>
+        </StackLayout>
+    
+        <StackLayout Orientation="Horizontal" Spacing="20" Margin="20" HorizontalOptions="Center">
+            <Button x:Name="add3" Text="Add" Clicked="add3_Clicked" WidthRequest="150" BackgroundColor="Black" TextColor="Purple"/>
+            <Button x:Name="show3" Text="Show" Clicked="show3_Clicked" WidthRequest="150" BackgroundColor="Black" TextColor="Purple"/>
+        </StackLayout>
+
+
+        <ScrollView>
+            <ListView x:Name="EnrollList" ItemTapped="EnrollList_ItemTapped">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Spacing="15" Margin="10">
+                                <Label Text="{Binding Stu_ID}" Padding="10"/>
+                                <Label Text="{Binding Stu_Name}" Padding="10"/>
+                                <Label Text="{Binding course_code}" Padding="10"/>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </ScrollView>
+
+        <Button x:Name="delete" Text="Delete" Clicked="Button_Clicked" WidthRequest="150" BackgroundColor="Black" TextColor="Purple" IsEnabled="False" HorizontalOptions="Center" Margin="10"/>
+    </VerticalStackLayout>
+
+</ContentPage>

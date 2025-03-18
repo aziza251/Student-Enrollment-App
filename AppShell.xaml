@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="mobile.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:mobile"
+    Shell.FlyoutBehavior="Disabled"
+    Title="mobile">
+
+    <TabBar>
+
+        <Tab Title="Home">
+            <ShellContent Route="MainPage">
+                <ShellContent.ContentTemplate>
+                    <DataTemplate>
+                        <local:MainPage />
+                    </DataTemplate>
+                </ShellContent.ContentTemplate>
+            </ShellContent>
+        </Tab>
+
+        <Tab Title="Student" Icon="student.png">
+            <ShellContent Route="student">
+                <ShellContent.ContentTemplate>
+                    <DataTemplate>
+                        <local:student />
+                    </DataTemplate>
+                </ShellContent.ContentTemplate>
+            </ShellContent>
+        </Tab>
+
+        <Tab Title="Course" Icon="course.png">
+            <ShellContent Route="course">
+                <ShellContent.ContentTemplate>
+                    <DataTemplate>
+                        <local:course />
+                    </DataTemplate>
+                </ShellContent.ContentTemplate>
+            </ShellContent>
+        </Tab>
+
+        <Tab Title="Enroll" Icon="enroll.png">
+            <ShellContent Route="enroll">
+                <ShellContent.ContentTemplate>
+                    <DataTemplate>
+                        <local:enroll/>
+                    </DataTemplate>
+                </ShellContent.ContentTemplate>
+            </ShellContent>
+        </Tab>
+
+    </TabBar>
+
+</Shell>
