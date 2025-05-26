@@ -1,6 +1,5 @@
 # Student-Enrollment-App
 
-Change to master branch to see the code
 Frontend: XAML
 
 Backend: C#
